@@ -6,6 +6,7 @@
     height: 0; 
     font-weight: 600;
     font-size: 16px;
+    font-style: normal;
     color: @black;
     transition: color 0.2s;
     &:hover{
@@ -16,6 +17,14 @@
     &:active{
         color: @red;
     }
+
+    &__vertical {
+        flex-direction: column;
+        height: 132px;
+        width: 128px;
+        
+    }
+
     &__name,
     &__icon{
         cursor: pointer;

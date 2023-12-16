@@ -2,7 +2,7 @@
 <html lang="ru">
   @@include('blocks/head.html')
 
-  <body>
+  <body class="body">
     @@include('blocks/page-header.html')
 
     <main class="main">
@@ -21,6 +21,7 @@
           
         </header>
 
+        @@include('blocks/offers.html', {"class": "home__offers"})
         
 
         <section class="offers home__offers"></section>
@@ -35,7 +36,7 @@
     </main>
 
     @@include('blocks/page-footer.html')
-
+    @@include('blocks/event-pp.html')
 
 
   </body>

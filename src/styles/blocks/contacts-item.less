@@ -1,10 +1,8 @@
 .contacts-item {
-
     display: flex;
     align-items: center;
     gap: 54px;
-
-    &__img{
+    &__img {
         display: flex;
         justify-content: center;
         align-items: center;
@@ -14,38 +12,35 @@
         color: @red;
     }
 
-    &__title{
+    &__title {
         margin: 0 0 10px;
         font-weight: 600;
         font-size: 20px;
         line-height: normal;
-        color: @black; 
+        color: @black;
     }
 
-    &__info{
+    &__info {
         margin: 0 0 5px;
         display: block;
-
         font-weight: 400;
         font-size: 16px;
         line-height: normal;
         color: @black;
-        &[href]{
+        &[href] {
             text-decoration: none;
-
             transition: color 0.2s;
-            &:hover{
-                @media(hover: hover){
+            &:hover {
+                @media (hover: hover) {
                     color: @red;
                 }
             }
-            &:active{
+            &:active {
                 color: @red;
             }
         }
-        &:last-child{
+        &:last-child {
             margin-bottom: 0;
         }
     }
-
 }
