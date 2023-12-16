@@ -2,6 +2,13 @@
     display: flex;
     align-items: center;
     gap: 54px;
+
+    &--fdcol {
+        flex-direction: column;
+        gap: 40px;
+        //justify-content: center;
+    }
+
     &__img {
         display: flex;
         justify-content: center;
@@ -9,27 +16,31 @@
         width: 110px;
         height: 110px;
         background-color: @black;
-        color: @red;
     }
-
     &__title {
         margin: 0 0 10px;
         font-weight: 600;
         font-size: 20px;
         line-height: normal;
+        text-align: center;
         color: @black;
     }
-
     &__info {
-        margin: 0 0 5px;
         display: block;
+        margin: 0;
+        margin: 0 0 5px;
         font-weight: 400;
         font-size: 16px;
-        line-height: normal;
-        color: @black;
+        &--mw401 {
+            max-width: 401px;
+        }
+        &--tacenter {
+            text-align: center;
+        }
         &[href] {
-            text-decoration: none;
             transition: color 0.2s;
+            text-decoration: none;
+
             &:hover {
                 @media (hover: hover) {
                     color: @red;
