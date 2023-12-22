@@ -7,33 +7,47 @@
     @@include('blocks/page-header.html')
 
     <main class="main">
-
+      @@include('blocks/breadcrumbs.html')
         <!-- Здесь будут хлебные крошки -->
 
         <article class="event">
+          <header class="event__header">
+            <h1 class="event__title title">Вечер | The Best of Sade</h1>
+            <div class="event__about">
+              <div class="event__info">
+                <time datetime="2024-12-16T20:00" class="event__time">16/12/2024</time>
+                <div class="event__info-text">Кафе «Птичка»</div>
+              </div>
 
+              <picture class="event__picture">
+                <!-- <source
+                  media="(max-width: 1169px)"
+                  type="image/webp"
+              
+                /> -->
+                <img src="assets/images/sade497.png" alt="Вечер | The Best of Sade">
+              </picture>
+
+              <div class="event__info">
+                <span class="event__time" data-caption="начало"> 20.00 </span>
+                <div class="event__info-text">Ленина 10 | 2 этаж</div>
+              </div>
+
+
+
+
+
+            </div>
+
+
+
+          </header>
           <!-- Здесь пропущенное содержимое страницы -->
 
-          <form class="reserve event__reserve">
-
-            <div class="reserve__checks">
-              Чекбоксы
-            </div>
-
-            <div class="reserve__scheme">
-              Схема столов
-            </div>
-
-            <div class="reserve__order">
-              Оформление заказа
-            </div>
-
-            <div class="reserve__legend">
-              Легенда
-            </div>
-
-          </form>
-
+          <div class="event__container">
+            @@include('blocks/reserve.html', {"class": "event__reserve"})
+          </div>
+          
         </article>
         
       </main>
