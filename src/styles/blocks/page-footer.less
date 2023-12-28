@@ -99,20 +99,40 @@
     &__confidence {
         margin-right: 60px;
     }
+
     &__social {
         display: flex;
         flex-direction: row;
+        gap: 44px;
     }
     &__link {
-        display: block;
-        transition: color 0.2s;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: background-color 0.2s;
+        width: 58px;
+        height: 58px;
+        border-radius: 50%;
+        background-color: @black;
         &:last-child {
             margin: 0;
         }
         &:hover {
-            color: @red_dark;
+            background-color: @red_dark;
+        }
+        &::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 24px; 
+            height: 24px; 
+            background-color: transparent; 
         }
     }
+
     &__tagree {
         display: inline-flex;
         justify-content: flex-end;
