@@ -2,7 +2,14 @@
     position: relative;
     box-sizing: border-box;
     display: flex;
+    
     width: 100%;
+
+    @media @bw768 {
+      flex-direction: column;
+    }
+
+
     &:hover {
       .article-card__picture {
         box-shadow: 0 0 30px fade(@black, 55%);
@@ -23,6 +30,9 @@
             text-decoration-color: @red;
           }
         }
+    }
+    @media @bw768 {
+      width: 708px;
     }
 }
     &__picture {
@@ -86,6 +96,10 @@
         font-weight: 600;
         font-size: 24px;
         line-height: 33px;
+        @media @bw768{
+          font-size: 20px;
+          font-weight: 600;
+        }
       }
 
     &__description {
@@ -100,6 +114,9 @@
         bottom: 30px;
         color: inherit;
         transition: none;
+        @media @bw768{
+          bottom: 0px;
+        }
     }
 
     & + .article-card {
