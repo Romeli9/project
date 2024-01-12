@@ -1,12 +1,18 @@
 <section class="upcoming home__upcoming @@class">
-    <div class="upcoming">
-        <section class="listing events__listing">
-            <h2 class="listing__title section-title">Мероприятия</h2>
-            <div class="listing__events-list">
+ 
+    
+      <div class="upcoming__top"></div>
+      <div class="upcoming__container">
+
+      <h2 class="listing__title section-title upcoming__title">Мероприятия</h2>
+      
+        <section class="listing upcoming__listing">
+            
+          <!-- <div class="listing__events-list"> -->
             <!-- prettier-ignore -->
             @@loop('event-card.html', [
             {
-              "class": "listing__event-card",
+              "class": "listing__event-card--i",
               "img": "assets/images/Nirvana.jpg",
               "alt": "nirvana",
               "title": "Собираемся и слушаем альбом Nirvana.",
@@ -15,7 +21,7 @@
               "datetime": "2022-12-07T18:00"
             },
             {
-              "class": "listing__event-card",
+              "class": "listing__event-card--i",
               "img": "assets/images/stuff.png",
               "alt": "stuff",
               "title": "Есть тема, нужно обсудить с HowStuffWorks",
@@ -24,7 +30,7 @@
               "datetime": "2022-12-14T18:30"
             },
             {
-              "class": "listing__event-card",
+              "class": "listing__event-card--i",
               "img": "assets/images/Sade.png",
               "alt": "sade",
               "title": "Вечер | The Best of Sade",
@@ -33,10 +39,33 @@
               "datetime": "2022-12-16T20:00"
             },
           ])
-
-          </div>
+        <!-- </div> -->
+          
         
-    
+          
         </section>
-    </div>
         
+          <div class="upcoming__slider">
+            <a href="#" class="link">
+              <svg class="link__icon link__reverse" width="91" height="60">
+                <use xlink:href="assets/icons/symbols.svg#link"></use>
+            </svg></a>
+  
+            <svg class=""
+              width="99"
+              height="2">
+          <use xlink:href="assets/icons/symbols.svg#center"></svg>
+              
+            <a href="#" class="link"><svg class="link__icon" width="91" height="60">
+                <use xlink:href="assets/icons/symbols.svg#link"></use>
+            </svg></a>
+            
+          </div>
+  
+          <a href="#" class="upcoming__link link">Смотреть все</a>
+        </div>
+        
+
+        
+    <div class="upcoming__bot"></div>
+  </section>
