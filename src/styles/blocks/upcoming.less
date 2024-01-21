@@ -1,6 +1,4 @@
 .upcoming{
-    padding: 90px 0 55px 0;
-    background-color: @white_bg;
 
     @media @bw1660 {
         padding: 70px 0 47px 0;
@@ -93,4 +91,65 @@
         
     // }   
 
+    }
+
+    #tringl-right-top{
+    
+        width: 0;
+        height: 0;
+        border-bottom: 40px solid rgba(255, 255, 255, 0.60);
+        border-right: 40vw solid transparent;
+    }
+    
+    #tringl-left-top{
+        
+        width: 0;
+        height: 0;
+        border-bottom: 40px solid rgba(255, 255, 255, 0.60);
+        border-left: 60vw solid transparent;
+    
+    }
+    
+    #tringl-right-button{
+        
+        width: 0;
+        height: 0;
+    
+        border-top: 40px solid rgba(255, 255, 255, 0.60);
+        border-right: 60vw solid transparent;
+    }
+    
+    #tringl-left-button{
+        
+        width: 0;
+        height: 0;
+    
+        border-top: 40px solid rgba(255, 255, 255, 0.60);
+        border-left: 60vw solid transparent;
+        
+    
+    }
+    
+    .tringle{
+        
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+        max-width: 1920px;
+        width: 100%;
+    
+        &-top{
+            margin-top: 91px;
+        }
+        // &-button{
+    
+        // }
+        
+    }
+    
+    .bgc{
+        max-width: 1920px;
+        width: 100%;
+        height: 1236px;
+        background-color: rgba(255, 255, 255, 0.60);
     }
