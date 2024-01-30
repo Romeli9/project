@@ -155,9 +155,26 @@
     &__form{
         width: 410px;
 
+        @media @bw1340{
+            width: 388px;
+        }
+
         @media @bw768 {
             margin-left: auto;
             margin-right: auto;
+        }
+
+        @media @bw500{
+            max-width: 388px;
+            width: 100%;
+        }
+
+        @media @bw400{
+            //margin-left: -20px;
+            //margin-right: -20px;
+            //padding: 0;
+            //max-width: none;
+            //width: calc(100%+40px);
         }
     }
 
@@ -179,6 +196,13 @@
 
         @media @bw500{
             font-size: 13px;
+            padding-left: 0;
+            text-align: start;
+            font-style: normal;
+            font-weight: 400;   
+            line-height: normal;
+            margin-right: 0;
+            padding-right: 0;
         }
     }
 
