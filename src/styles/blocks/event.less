@@ -1,45 +1,53 @@
 .event {
-    padding: 40px 0 150px;
+    padding: 0 0 90px;
 
-    &__container{
+    &__container {
         .container;
     }
 
-    &__header{
-        .container;
+    &__header {
         margin-bottom: 80px;
 
-
     }
 
-    &__about{
-        display: flex;
-        justify-content: center;
-        align-items: center;
 
-        @media @bw768{
+
+    &__about {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        @media @bw768 {
             flex-wrap: wrap;
-            
         }
     }
 
-    &__info{
+    &__info {
         flex-shrink: 0;
         box-sizing: border-box;
         position: relative;
         display: flex;
         flex-direction: column;
         align-items: flex-end;
-        padding: 12px 0;
+        padding: 13px 0;
         font-family: @font3;
         font-weight: 300;
         text-align: right;
         text-transform: uppercase;
 
+        &-text {
+            font-size: 16px;
+            line-height: 19px;
+            font-weight: 700;
+            text-align: right;
 
+            @media @bw1340 {
+                font-size: 12px;
+            }
+        }
 
         &::before,
-        &::after{
+        &::after {
             content: "";
             position: absolute;
             left: 0;
@@ -51,100 +59,116 @@
             background-image: linear-gradient(270deg, #1C1B1B 0%, rgba(255, 255, 255, 0.00) 82.86%);
         }
 
-        &::before{
+        &::before {
             top: 0;
         }
-        &::after{
+
+        &::after {
             bottom: 0;
         }
 
-        &:last-child{
+        &:first-child {
+            @media @bw768 {
+                margin-right: 10px;
+            }
+        }
+
+        &:last-child {
             align-items: flex-start;
             text-align: left;
+
+            @media @bw768 {
+                margin-left: 10px;
+            }
+
             &::before,
-            &::after{
+            &::after {
                 left: 0;
                 right: auto;
                 background-image: linear-gradient(90deg, #1C1B1B 0%, rgba(255, 255, 255, 0.00) 82.86%);
 
             }
 
-            @media @bw768{
-                margin-left: 10px;
-            }
-
-        }
-
-        &:first-child{
-            @media @bw768{
-                margin-right: 10px;
-            }
         }
     }
-    &__time{
+
+    &__time {
         font-size: 30px;
         font-style: normal;
         font-weight: 300;
         line-height: 36px;
-        text-align: right;
-        &[datetime]{
-            &::after{
+
+        &[datetime] {
+            &::after {
                 content: attr(data-caption);
                 margin-left: 10px;
                 font-weight: 700;
-                font-size: 16px;    
+                font-size: 16px;
                 line-height: 19px;
 
-                @media @bw768{
+                @media @bw1340 {
                     font-size: 12px;
                 }
             }
         }
-        @media @bw768{
+
+        @media @bw1340 {
             font-size: 18px;
         }
+
+
     }
 
-    &__info-text{
-        font-size: 16px;
-        line-height: 19px;
-        font-weight: 700;
 
-        @media @bw768{
-            font-size: 12px;
-        }
-    }
-
-    &__picture{
+    &__picture {
         display: block;
         width: 497px;
         margin: 0 50px;
 
-        @media @bw768{
+        @media @bw768 {
             order: -1;
             margin-bottom: 40px;
+            width: 76.5625%;
+            max-width: 350px;
+            min-width: 245px;
         }
-    }
-    
-    &__image{
-        display: block;
-        width: 100%;
+
     }
 
-    &__content{
+    &__img {
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    &__title {
+        margin: 0 0 80px;
+        color: @black;
+        text-align: center;
+        font-family: @font2;
+        font-size: 70px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+
+        @media @bw1020 {
+            margin-bottom: 65px;
+            font-size: 40px;
+        }
+
+        @media @bw768 {
+            margin-bottom: 40px;
+            font-size: 20px;
+        }
+    }
+
+    &__content {
         max-width: 830px;
         margin-bottom: 80px;
     }
-
-    &__title{
-        margin: 0 0 80px;
-        background-color: transparent;
-        color: @black;
-        font-family: @font2;
-        font-weight: 500;
-        text-align: center;
-        max-width: 1414px;
-        font-size: 70px;
-      }
 
 }
