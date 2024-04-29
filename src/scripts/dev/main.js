@@ -25,7 +25,7 @@
                 case "click":
                     if (
                         event.target === this ||
-                        event.target.classList.contains("js-ppCloseBtn")
+                        event.target.classList.contains("js-eventCloseBtn")
                     )
                         close();
                     break;
