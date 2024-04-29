@@ -7,7 +7,7 @@
 
     navToggle.addEventListener("click", function () {
         root.classList.toggle("show-nav");
-    })
+    });
 
     const eventPP = document.querySelector("#js-eventPP");
     if (eventPP) {
