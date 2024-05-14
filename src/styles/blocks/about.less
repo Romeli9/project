@@ -23,6 +23,10 @@
         font-weight: 700;
         color: @black;
 
+        @media @bw1340{
+            margin: 49px 11px 50px;
+        }
+
         @media @bw1020 {
             font-size: 26px;
         }
@@ -58,6 +62,10 @@
             grid-area: title;
             top: 37px;
 
+            @media @bw1340{
+                top: 0;
+            }
+
             @media @bw1020 {
                 margin-bottom: 10px;
             }
@@ -79,9 +87,19 @@
         color: @black;
         line-height: 24.51px;
 
+        
+
+        &--1{
+            @media @bw1340{
+                margin: 0 -32px 100px;
+            }
+        }
+        
+
         @media @bw1020 {
+            margin: 0 0 100px;
             margin-left: auto;
-            margin-bottom: 80px;
+            //margin-bottom: 80px;
             max-width: 637px;
             font-size: 16px;
             line-height: 21.79px;
@@ -91,9 +109,14 @@
             margin-bottom: 60px;
         }
 
-        &--mt7{
+        &--mt{
             @media @bw360{
                 margin-top: 7px;
+            }
+
+            @media @bw1020{
+                margin: 0;
+                //margin-top: 15px;
             }
         }
 
@@ -101,15 +124,34 @@
             @media @bw360 {
                 width: 281px;
             }
+
+            @media @bw1160 {
+                //width: 281px;
+            }
         }
 
-        &--mt20{
+        &--w280{
+            @media @bw1020{
+                width: 281px;
+                margin-left: 0;
+                
+            }
+        }
+
+        &--mb90{
             margin-bottom: 90px;
+
+            @media @bw1340{
+                margin-bottom: 105px;
+                margin-left: 0px;
+            }
         }
 
         &--2 {
             grid-area: text;
             margin-left: auto;
+
+           
 
             @media @bw1020 {
                 position: relative;
@@ -117,6 +159,8 @@
                 max-width: 348px;
                 margin-bottom: 0;
             }
+
+
 
             @media @bw650 {
                 top: 0;
@@ -131,6 +175,16 @@
 
             &--mt20{
                 margin-top: -20px;
+
+                @media @bw1340{
+                    margin-top: -15px;
+                    margin-right: -30px;
+                }
+
+                @media @bw1020{
+                    margin-top: -20px;
+                    margin-right: 0;
+                }
             }
         }
 
@@ -258,6 +312,10 @@
             justify-content: space-between;
             margin-left: 0;
             max-width: none;
+            height: 66px;
+        }
+        @media @bw650 {
+            height: auto;
         }
 
         @media @bw650 {
@@ -350,6 +408,8 @@
         @media @bw1020 {
             align-self: center;
             margin-bottom: 0;
+            //margin-top: -35px;
+            margin-right: -20px;
             max-width: 267px;
             width: 100%;
         }
