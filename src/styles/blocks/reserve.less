@@ -77,6 +77,10 @@
       &:last-child{
         margin-bottom: 0;
       }
+
+      @media @bw1020{
+        margin-bottom: 15px;
+      }
     }
   
   
@@ -99,13 +103,22 @@
     }
   
     &__scheme-title{
-      margin: 0 0 40px;
+      margin: 38px 0 40px;
       padding: 6px 56px;
       background-color: @black;
       color: @white;
       font-weight: 600;
       font-size: 16px;
       line-height: 22px;
+
+      @media @bw1660{
+        margin: 42px 59px 45px 0;
+      }
+
+      @media @bw1020{
+        padding: 2.5px 41px;
+        margin: 46px -2px 45px 0;
+      }
     }
   
   
@@ -116,6 +129,10 @@
       margin-bottom: 18px;
       &:last-child{
         margin-bottom: 0;
+      }
+
+      @media @bw400{
+        margin-bottom: 8px;
       }
       
     }
@@ -143,26 +160,90 @@
       &::before {
         content: attr(data-caption);
         margin-right: 30px;
+
+        @media @bw400{
+          margin-right: 70px;
+        }
       }
       &::after {
         content: attr(data-currency);
         margin-left: 4px;
         font-size: 0.95em;
       }
+
+      @media @bw400{
+        margin-top: 23px;
+      }
     }
   
     &__section-title{
-      margin: 0 0 20px;
+      margin: 35px 0 20px;
       font-weight: 700;
       font-size: 18px;
       line-height: 25px;
   
+      @media @bw1020{
+        width: 160px;
+        font-size: 16px;
+        line-height: 21.79px;
+        margin: -44px 0 20px;
+      }
+
       @media @bw768 {
         text-align: left;
+
       }
   
       &--mb30{
         margin-bottom: 30px;
+
+        @media @bw1020{
+          margin-bottom: -3px;
+        }
+
+        @media @bw400{
+          margin-top: -10px;
+          margin-bottom: 0;
+        }
+      }
+
+      &--1{
+        margin-top: 0;
+
+        @media @bw1660{
+          margin-top: 33px;
+        }
+
+        @media @bw400{
+          width: 272px;
+          margin-top: -27px;
+        }
+      }
+
+      &--2{
+        @media @bw1660{
+          margin-top: 68px;
+        }
+
+        @media @bw1020{
+          width: 315px;
+          margin-top: 0;
+        }
+
+        @media @bw400{
+          width: 252px;
+          margin-top: 32px;
+        }
+      }
+
+      &--3{
+        @media @bw1020{
+          margin-top: 31px;
+        }
+
+        @media @bw400{
+          margin-top: 16px;
+        }
       }
     }
   
@@ -170,7 +251,7 @@
       display: flex;
       flex-direction: column;
       align-items: flex-end;
-      margin: 0 0 35px;
+      margin: -35px 0 4px;
   
       @media @bw768 {
         align-items: start;
@@ -275,4 +356,10 @@
         margin-bottom: 0;
       }
     }
+
+
+    &__submit{
+      margin-top: -16px;
+    }
+
   }
